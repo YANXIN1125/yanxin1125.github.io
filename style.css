@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: 	#F0F0F0; /* 新的背景色 */
+}
+
+header {
+  background-color: #001f3f; /* 藍色背景 */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  border-bottom: 2px solid #001f3f; /* 藍色分割線 */
+  padding-bottom: 10px;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+.about-photo {
+  width: 200px; /* 确保宽度一致 */
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-photo-rect {
+  width: 300px; /* 设定矩形宽度 */
+  height: auto; /* 自动调整高度 */
+  object-fit: cover; /* 维持图片比例 */
+  border-radius: 0; /* 移除圆角，显示为矩形 */
+}
