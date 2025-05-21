@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的作品集</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    @font-face {
+      font-family: 'DFKai-SB';
+      src: url('attached_assets/GenSenRounded2-B.ttc') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'DFKai-SB', sans-serif;
+  padding-top: 120px; /* 根據 header 高度調整，這裡假設 header 高度大約 120px */
+    }
+    #welcome-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #001F3F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    #enter-btn {
+      background-color: #ffffffcc;
+      color: #000;
+      font-size: 2rem;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #enter-btn:hover {
+      background-color: #ffffff;
+    }
+    body.hidden-content main,
+    body.hidden-content header {
+      display: none;
+    }
+    /* 讓所有 section 內容置中 */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    main > section {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 2.5rem auto;
+      text-align: center;
+    }
+    main > section > div,
+    main > section > ul {
+      justify-content: center !important;
+    }
+    /* 讓flex內容左右排列時，文字靠左但整體置中 */
+    .section-flex {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      justify-content: center;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      .section-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      main > section {
+        max-width: 98vw;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="hidden-content">
+  <div id="welcome-screen">
+
+    <button id="enter-btn" style="font-family: 'DFKai-SB', sans-serif;">歡迎來到妍欣的個人網頁</button>
+  </div>
+
+  <header class="bg-dark text-white text-center py-5">
+    <h1>歡迎來到我的個人網頁</h1>
+    <nav>
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link text-white" href="#about">關於我</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#education">教育背景</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#work">工作經歷</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#experience">特殊經歷</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#classwork">課堂作品</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#finalproject">期末專題</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">聯絡方式</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+          <div style="font-size: 2.5rem; font-weight: bold; color: #1976d2; margin-bottom: 16px;">
+           <h1>  </h1>
+          </div>
+    <section id="about" class="mb-5">
+      <div class="section-flex">
+        <div style="flex: 0 0 auto;">
+          <img src="attached_assets/關於我.JPG" alt="我的照片" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+        </div>
+        <div style="flex: 1 1 0;">
+          <div style="font-size: 2.5rem; font-weight: bold; color: #1976d2; margin-bottom: 16px;">
+            葉妍欣
+          </div>
+
+          <div style="font-size: 1.5rem; font-weight: 600;">國立臺灣科技大學 企業管理系
+          </div>
+
+          <div style="font-size: 1.1rem; color: #666; margin-bottom: 24px;">
+            <h6>  </h6>
+            我是葉妍欣，今年21歲。目前就讀臺灣科技大學企業管理系大三。<br>
+            我的興趣是旅遊、攝影和烹飪，16型人格是ENTJ。<br>
+            我有著一顆熱誠的心，我是一個懷抱熱情的人。<br>
+            2024火車環島、2025打工換宿，很熱血吧！<br>
+            我是妍欣，延續初心。<br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="mb-5">
+  <div style="padding: 24px 0 16px 0;">
+    <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+      教育背景
+    </h2>
+  <div style="display: flex; justify-content: flex-start; align-items: flex-start; gap: 32px;">
+
+      <!-- 台科大區塊 -->
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <img src="attached_assets/台科大.png" alt="台科大Logo" style="width: 60px; height: auto;">
+      <div>
+        <div style="font-size: 1.1rem; font-weight: 600; text-align: left;">國立臺灣科技大學 大三</div>
+        <div style="text-align: left;">
+          主修 企業管理系<br>
+          輔系 財務金融學士學位學程<br>
+          2022 -
+        </div>
+      </div>
+    </div>
+
+    <!-- 松山家商區塊 -->
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <img src="attached_assets/松山家商.png" alt="松山Logo" style="width: 60px; height: auto;">
+      <div>
+        <div style="font-size: 1.1rem; font-weight: 600; text-align: left;">臺北市立松山家商</div>
+        <div style="text-align: left;">
+          商業經營科<br>
+          2019 - 2022
+        </div>
+      </div>
+
+  </div>
+  </section>
+
+
+    <section id="work" class="mb-5">
+    <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+      工作經歷
+    </h2>
+      <div class="section-flex" style="gap: 32px;">
+        <div style="flex: 0 0 auto;">
+          <div style="font-size: 1.1rem; font-weight: 600;">雲雀國際skylark</div>
+          <div>
+            五級準社員 外場服務生<br>
+            2022/10 - 至今<br>
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <div style="font-size: 1.1rem; font-weight: 600;">家庭教師</div>
+          <div>
+            高職會計家教<br>
+            2022/11 - 2025/5<br>
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <div style="font-size: 1.1rem; font-weight: 600;">芯鮮果國際</div>
+          <div>
+            專案人員 2023年度ERP進貨管理<br>
+            2023/10 - 2024/2<br>
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <div style="font-size: 1.1rem; font-weight: 600;">景諒會計事務所</div>
+          <div>
+            工讀生<br>
+            2022/1 - 2024/1<br>
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <div style="font-size: 1.1rem; font-weight: 600;">蝦皮店到店</div>
+          <div>
+            門市人員<br>
+            2022/7 - 2022/8<br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="mb-5">
+    <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+      特殊經歷
+    </h2>
+  <div class="experience-grid">
+    <div class="experience-item">
+      <p>｜2025資訊科技應用國際學術研討會｜</p>
+
+    </div>
+    <div class="experience-item">
+      <p>｜2025鯤鵬營－武漢先行體驗營｜</p>
+
+    </div>
+    <div class="experience-item">
+      <p>｜2024暑期兩岸交流活動－無錫｜</p>
+
+    </div>
+    <div class="experience-item">
+      <p>｜第七屆海峽兩岸青年發展論壇｜</p>
+
+    </div>
+    <div class="experience-item">
+      <p>｜打工換宿－護城河畔的樹屋書店｜</p>
+
+    </div>
+    <div class="experience-item">
+      <p>｜松山家商 畢業生代表｜</p>
+
+    </div>
+
+      <!-- 隱藏群組 -->
+      <div class="hidden" id="moreItems">
+        <div class="experience-item">
+          <p>｜松山家商 商經科科會長｜</p>
+        </div>
+      </div>
+
+      <!-- 查看更多按鈕容器 -->
+      <div class="experience-item center-btn" id="moreBtnContainer">
+        <button id="showMoreBtn" class="btn" style="font-family: 'DFKai-SB', sans-serif;">查看更多</button>
+      </div>
+  </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const moreItems = document.getElementById('moreItems');
+          const moreBtnContainer = document.getElementById('moreBtnContainer');
+
+          document.getElementById('showMoreBtn').addEventListener('click', function () {
+            moreItems.classList.remove('hidden');
+            moreBtnContainer.style.display = 'none';
+          });
+        });
+      </script>
+</section>
+
+<style>
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.experience-item {
+  text-align: center;
+}
+
+.experience-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* 隱藏區塊 */
+.hidden {
+  display: none;
+}
+
+/* 查看更多按鈕樣式 */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* 讓按鈕置中顯示 */
+.center-btn {
+  grid-column: 1 / -1; /* 讓按鈕橫跨整排 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+</style>
+
+<script>
+document.getElementById("showMoreBtn").addEventListener("click", function() {
+  const hiddenItem = document.getElementById("hiddenItem");
+  hiddenItem.style.display = "block";
+  this.style.display = "none";
+});
+</script>
+
+
+
+<section id="classwork" class="mb-5">
+  <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+    課堂作品
+  </h2>
+  <style>
+    .classwork-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .classwork-item {
+      width: 300px;
+      text-align: center;
+      font-family: 'DFKai-SB', sans-serif;
+    }
+    .classwork-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    /* 手機版自動斷行 */
+    @media (max-width: 640px) {
+      .classwork-item {
+        width: 90%;
+      }
+    }
+  </style>
+
+  <div class="classwork-grid">
+    <div class="classwork-item">
+      <p>MediaPipe 物件偵測</p>
+      <img src="attached_assets/MediaPipe 物件偵測.png" alt="0225" />
+    </div>
+
+    <div class="classwork-item">
+      <p>MediaPipe 臉部偵測</p>
+      <img src="attached_assets/MediaPipe 臉部偵測.png" alt="0304" />
+    </div>
+
+    <div class="classwork-item">
+      <p>Pose Estimation</p>
+      <img src="attached_assets/Pose Estimation.png" alt="0311" />
+    </div>
+
+    <div class="classwork-item">
+      <p>Teachable Machine</p>
+      <img src="attached_assets/Teachable Machine.png" alt="0318" />
+    </div>
+  </div>
+</section>
+
+    <section id="finalproject" class="mb-5">
+    <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+      期末專題
+    </h2>
+    </section>
+
+    <section id="contact" class="mb-5">
+    <h2 style="text-align: center; font-weight: bold; letter-spacing: 4px; font-size: 2rem; margin-bottom: 8px; font-family: 'DFKai-SB', serif;">
+      聯絡方式
+    </h2>
+      <p>1125xin@gmail.com</p>
+      <p>歡迎聯絡我</p>
+    </section>
+
+
+    <section>
+      <img src="attached_assets/1.png" alt="1" style="width: 150px; height: auto;" />
+      <img src="attached_assets/2.png" alt="2" style="width: 150px; height: auto;" />
+      <img src="attached_assets/3.png" alt="3" style="width: 150px; height: auto;" />
+      <img src="attached_assets/4.png" alt="4" style="width: 150px; height: auto;" />
+    </section>
+  </main>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("enter-btn").addEventListener("click", function () {
+      document.getElementById("welcome-screen").style.display = "none";
+      document.body.classList.remove("hidden-content");
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
